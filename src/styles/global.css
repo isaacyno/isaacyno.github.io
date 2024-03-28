@@ -185,3 +185,5 @@ hr {
 	}
 
 }
+
+.katex-display { overflow: auto hidden }

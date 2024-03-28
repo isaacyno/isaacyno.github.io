@@ -8,3 +8,9 @@ const html = katex.renderToString(f, { throwOnError: false });
 <span set:html={html} />
 
 <!-- moved katex.css to ../layouts/BlogPost.astro -->
+
+<style>
+  span {
+    white-space: nowrap;
+  }
+</style>
