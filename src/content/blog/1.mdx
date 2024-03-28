@@ -1,0 +1,80 @@
+---
+title: 'Where Does the Quadratic Formula Come From?'
+description: 'A Derivation of the Quadratic Formula'
+pubDate: 'March 28, 2024'
+---
+
+import LXI from '../../components/LXI.astro';
+import LXD from '../../components/LXD.astro';
+
+Every student of mathematics will eventually come across the quadratic formula in some algebra class. 
+He/she will probably see something along the lines of:
+
+The solutions to the equation <LXI f='ax^2+bx+c=0'/>, where <LXI f ='a \neq 0'/>, are <LXI f='x = \dfrac{-b \pm \sqrt{{b^2-4ac}}}{2a}.'/>
+
+But where does this equation even come from? Most students don't see a proof in their algebra classes (and may never come across one for the rest of their math careers), but in this post, we'll go through exactly that. 
+
+
+Consider the quadratic <LXI f='ax^2+bx+c'/>, where <LXI f ='a \neq 0'/>. 
+We can assume that <LXI f='a \neq 0'/>, since if <LXI f='a = 0'/>, then <LXI f='ax^2+bx+c = bx+c'/>, which is no longer a quadratic (it is now linear). 
+It is very important to state that <LXI f='a=0'/>, since the derivation of the quadratic formula will use divisions by <LXI f='a'/> (recall that you can divide by a number as long as it is not 0). An important concept that the proof requires is completing the square, which will be covered in a future post. Now, here we go!
+
+We first start with our initial problem:
+
+<LXD f='ax^2+bx+c=0'/>
+
+Next, we'll factor out an <LXI f='a'/> from the first two terms (The <LXI f='ax^2'/> and <LXI f='bx'/> terms). The reason we do this is to set ourselves up for completing the square. When we complete the square, we want to work with an <LXI f='x^2'/> term with a coefficient of <LXI f='1.'/> It may seem a bit odd to factor out an <LXI f='a'/> from a term that doesn't even have an <LXI f='a,'/> but it's actually still possible! It's very similar to rewriting <LXI f='3'/> as <LXI f='2 \cdot \frac{3}{2}'/>. 
+
+<LXD f='a\left(x^2+ \dfrac{b}{a}x \right) + c = 0'/> 
+
+If you're unsure, you can always distribute back the <LXI f='a'/> and check that it indeed matches the equation that we started with! 
+
+Now, we'll be completing the square. Remember that when completing the square, you take the coefficient of the <LXI f='x'/> term, half it, and then square it. In this case, The coefficient of the <LXI f='x'/> term is <LXI f='\frac{b}{a}'/>. If we take half of this, we get <LXI f='\frac{b}{2a}'/>. Finally, if we square this term, we get<LXI f='\frac{b^2}{4a^2}'/>. We're now going to add this to the inside of the parenthesis. 
+
+However, remember that you're not allowed to just add a value to one side of the equation! Doing so will cause the equation to become invalid. If you add a value to one side of an equation, you must at the same value to the other side. Be careful, though! We're not just adding <LXI f='\frac{b^2}{4a^2}'/> – we're actually adding <LXI f='a \cdot \frac{b^2}{4a^2} = \frac{b^2}{4a}'/> because of the <LXI f='a'/> that we factored out in the previous step. We now have the following:
+
+<LXD f='a\left(x^2+ \dfrac{b}{a}x + \dfrac{b^2}{4a^2} \right) + c  = \dfrac{b^2}{4a}'/> 
+
+Since we just completed the square, we can factor! We're also going to be subtracting <LXI f='c'/> from both sides.
+
+<LXD f='a \left(x+\dfrac{b}{2a} \right)^2 = \dfrac{b^2}{4a} - c'/> 
+
+Again, if you're unsure, you can distribute <LXI f='\left(x+\frac{b}{2a} \right)^2'/> and check that it matches the corresponding portion from the previous step.
+
+Next, we're going to express the right side as a single fraction. We can do so by multiplying <LXI f='c'/> by <LXI f='\frac{4a}{4a}=1'/>. Remember that multiplying by <LXI f='1'/> doesn't change the value of something!
+
+<LXD f='a \left(x+\dfrac{b}{2a} \right)^2 = \dfrac{b^2-4ac}{4a}'/> 
+
+Now, we'll divide by <LXI f='a'/> on both sides. Recall that we have no issues with <LXI f='a'/> as a denominator since we know that <LXI f='a \neq 0'/>.
+
+<LXD f='\left(x+\dfrac{b}{2a} \right)^2 = \dfrac{b^2-4ac}{4a^2}'/> 
+
+Next, we'll take the square root of both sides. Remember that when taking the square root, you must consider plus or minus. Also, remember that for square roots, <LXI f='\sqrt{\frac{\alpha}{\beta}} = \frac{\sqrt{\alpha}}{\sqrt{\beta}}'/>.
+
+
+
+<LXD f='x+ \dfrac{b}{2a} = \pm \sqrt{\dfrac{{b^2-4ac}}{4a^2}} = \pm \dfrac{\sqrt{{b^2-4ac}}}{\sqrt{4a^2}}'/> 
+
+Now, we'll simplify <LXI f='\sqrt{4a^2}'/>. We'll be using the property that <LXI f='\sqrt{\alpha\beta} = \sqrt{\alpha}\sqrt{\beta}'/>. 
+
+<LXI f='\sqrt{4a^2} = \sqrt{4}\sqrt{a^2}=2\sqrt{a^2}'/>. You might be tempted to say that <LXI f='\sqrt{a^2}=a'/>, but this is actually not the case! It turns out that <LXI f='\sqrt{a^2} = |a|'/>. For instance, if we consider <LXI f='a=-2'/>, then <LXI f='\sqrt{a^2} = \sqrt{(-2)^2} = \sqrt{4} = 2 = |-2| \neq -2'/>. 
+
+If we now come back to where we left off, we have the following:
+
+<LXD f='x+ \dfrac{b}{2a} = \pm \dfrac{\sqrt{{b^2-4ac}}}{2|a|}'/> 
+
+Because of the <LXI f='\pm'/>, we can actually  get rid of the absolute value around the <LXI f='a'/>. This is because <LXI f='\pm|a| = \{a,-a\} = \pm a'/>. Don't worry too much if this step is a bit confusing. All we need to know is that we can get rid of the absolute value.
+
+We're now left with the following:
+
+<LXD f='x+ \dfrac{b}{2a} = \pm \dfrac{\sqrt{{b^2-4ac}}}{2a}'/> 
+
+We're almost there! The next step is to subtract <LXI f='\frac{b}{2a}'/> from both sides.
+
+<LXD f='x = - \dfrac{b}{2a} \pm \dfrac{\sqrt{{b^2-4ac}}}{2a}'/> 
+
+Since both fractions have the same denominator, we can easily combine them, and we'll have the quadratic formula!
+
+<LXD f='x = \dfrac{-b \pm \sqrt{{b^2-4ac}}}{2a}'/>
+
+The proof is now complete!

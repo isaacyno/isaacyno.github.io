@@ -1,0 +1,25 @@
+{
+  "name": "isaacyno.github.io",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.10",
+    "@astrojs/mdx": "^2.2.1",
+    "@astrojs/rss": "^4.0.5",
+    "@astrojs/sitemap": "^3.1.1",
+    "astro": "^4.5.9",
+    "astro-icon": "^1.1.0",
+    "katex": "^0.16.10",
+    "typescript": "^5.4.3"
+  },
+  "devDependencies": {
+    "@types/katex": "^0.16.7"
+  }
+}

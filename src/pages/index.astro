@@ -1,0 +1,69 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="container">
+        <div class="image">
+          <img src="home-pic.jpg" />
+        </div>
+
+        <div class="text">
+          <h1>Hi, I'm Isaac!</h1>
+
+          <p>
+            I'm a recent graduate from <a
+              href="https://www.ucla.edu"
+              target="_blank"
+              rel="noopener noreferrer">UCLA</a
+            > and am on my gap year before starting as a research mathematician in
+            the east coast. I am currently a math instructor at a local academy primarily
+            serving high school students.
+          </p>
+
+          <p>
+            Originally from Walnut, California, I graduted from <a
+              href="https://dbhs.wvusd.org/"
+              target="_blank"
+              rel="noopener noreferrer">Diamond Bar High School</a
+            > in 2019, where I was a Valedictorian as well as a National Merit Scholar.
+            I then attended <a
+              href="https://www.ucla.edu"
+              target="_blank"
+              rel="noopener noreferrer">UCLA</a
+            >, graduating <i>magna cum laude</i> in 2023 with a double major in <a
+              href="https://ww3.math.ucla.edu/"
+              target="_blank"
+              rel="noopener noreferrer">Mathematics</a
+            >
+            (with a Specialization in Computing) and <a
+              href="https://statistics.ucla.edu/"
+              target="_blank"
+              rel="noopener noreferrer">Statistics and Data Science</a
+            >.
+          </p>
+          <p>
+            In my free time, I like to listen to music and podcasts, play and
+            watch chess, and play guitar. I also like writing about various
+            mathematical topics, so feel free to check out my blog!
+          </p>
+          <p>
+            If you would like to contact me, feel free to send me an email at
+            isaacyno [at] gmail [dot] com.
+          </p>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
