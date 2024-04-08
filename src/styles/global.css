@@ -9,31 +9,22 @@
   - Isaac
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 
 :root {
-	--accent: #3cb371;
-	--accent-dark: seagreen;
+	--accent: rgb(24, 172, 108);
 	--black: 40, 40, 40;
 	--gray: 100, 100, 100;
 	--gray-light: 234, 234, 234;
 	--gray-dark: 44, 44, 44;
 	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
+	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
 }
 
 body {
-	/*font-family: 'Roboto', 'Open Sans', sans-serif;*/
-	/*font-family: "Open Sans";*/
-	/*font-family: sans-serif;*/
 	font-family: "Source Serif 4";
 	margin: 0;
 	padding: 0rem;
@@ -176,6 +167,7 @@ hr {
 	}
 	.text {
 	  max-width: 40rem;
+	  padding: 1rem 0rem;
 	}
 }
 
@@ -186,4 +178,7 @@ hr {
 
 }
 
-.katex-display { overflow: auto hidden }
+.katex-display {
+	overflow-y: visible;
+}
+
