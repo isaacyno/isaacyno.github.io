@@ -1,0 +1,121 @@
+---
+title: 'What is Completing the Square?'
+description: 'A Geometric Intuition to Completing the Square'
+pubDate: 'April 10, 2024'
+---
+
+import LXI from '/src/components/LatexInline.astro';
+import LXD from '/src/components/LatexDisplay.astro';
+import SVG from '/src/components/SVG.astro';
+
+Completing the square is one of the most important concepts taught in an algebra class. It allows us to solve equations of the form <LXI f='ax^2+bx+c=0'/> or rewrite equations such as <LXI f='y=ax^2+bx+c'/> in vertex form. But one of the first questions a student might have is: why is it even called completing the square? Hopefully, by the end of this post, you will know why.
+
+#### Case 1
+
+Let's start off with a simple expression, <LXI f='x^2+bx.'/> If we assume that <LXI f='x'/> and <LXI f='b'/> are both positive, we can represent this quantity as the sum of the areas of a square with length <LXI f='x'/> and a rectangle with a length of <LXI f='x'/> and a width of <LXI f='b.'/> Geometrically, it might look something like this:
+
+<SVG path="/src/assets/2/2-1.svg"/>
+
+We somehow want to rearrange these components to look like an incomplete square, so that we can then "complete the square." Is this achieveable? Certainly! We can split the rectangle into two identical, smaller rectangles with a length of <LXI f='x'/> and a width of <LXI f='\frac{b}{2}.'/> We can then place one on top and one to the right of the square. We now have the following:
+
+<SVG path="/src/assets/2/2-2.svg"/>
+
+This now looks like an incomplete square! The entire figure looks like a square of length <LXI f='x + \frac{b}{2}'/> with a missing portion on the top right. Note that the figure still has an area of <LXI f='x^2+bx'/> since we didn't add or remove any components (we only did some rearranging). Let's fill in this missing portion and continue our investigation.
+
+<SVG path="/src/assets/2/2-3.svg"/>
+
+The purple shape on the top right actually turns out to be a square of length <LXI f='\frac{b}{2}'/> (our splitting of the green rectangle exactly in half ensures this). The area of this purple square is <LXI f='\left(\frac{b}{2}\right)^2.'/>
+
+So, what did we just show? If we take our original area, <LXI f='x^2+bx,'/> and add <LXI f='\left(\frac{b}{2}\right)^2,'/> we achieve the area of a square with length <LXI f='x + \frac{b}{2}'/>. Algebraically, we have the following:
+
+<LXD f='x^2+bx + \left(\frac{b}{2}\right)^2 = \left(x+\frac{b}{2}\right)^2'/>
+
+As mentioned prior, this geometric intution only works for positive values of <LXI f='x'/> and <LXI f='b,'/> but the equation actually holds for all values of <LXI f='x'/> and <LXI f='b.'/>
+
+#### Case 2
+
+Let's now consider the expression <LXI f='x^2-bx.'/> Similar to case 1, we will assume that <LXI f='x'/> and <LXI f='b'/> are both positive so that our geometric representation makes sense. In this case, however, since we are subtracting <LXI f='bx,'/> we will also assume that <LXI f='b<x'/> so that we will still have an area left over once we perform the subtraction. I am stating these assumptions and restrictions in order to be rigorous, but there's no need to get caught up with them if they're confusing to understand, as they are not integral in the demonstration.
+
+So far we have the quantity <LXI f='x^2-bx,'/> which can be represented as the area of a square with length <LXI f='x,'/> minus the area of a rectangle with a length of <LXI f='x'/> and a width of <LXI f='b.'/> The diagram is essentially the same as that of the beginning of case 1, but the rectangle is now shaded in red because we want to subtract off this area.
+
+<SVG path="/src/assets/2/2-4.svg"/>
+
+Similar to case 1, we're going to split the rectangle into two identical, smaller rectangles with a length of <LXI f='x'/> and a width of <LXI f='\frac{b}{2}.'/> This time, however, we're going to subtract off the areas of the smaller rectangles one at a time:
+
+<SVG path="/src/assets/2/2-5.svg"/>
+
+After we subtract off the first rectangle, we are left with the following:
+
+<SVG path="/src/assets/2/2-6.svg"/>
+
+Let's now try to subtract off the remaining rectangle:
+
+<SVG path="/src/assets/2/2-7.svg"/>
+
+We're not able to subtract this rectangle completely; it seems like a small square is left over. Remember, we're subtracting off these rectangles in this specific manner in order to be left with an incomplete square. We're now left with the following:
+
+<SVG path="/src/assets/2/2-8.svg"/>
+
+Finally, let's shave off this tiny square from the top right of our larger square.
+
+<SVG path="/src/assets/2/2-9.svg"/>
+
+What does this accomplish? Well, the area of our remaining figure is actually equal to the original quantity that we started with, <LXI f='x^2-bx.'/> Notice that we were successfully able to subtract off the red area from the blue area in such a way that we are left with an incomplete square. All that's left now is to complete the square, and with the way that the diagram is already set up, it's really easy! We just have to add back the same area as the small red square, which is <LXI f='\left(\frac{b}{2}\right)^2.'/> If we do so, we'll have the area of a square with length <LXI f='x-\frac{b}{2}.'/> Algebraically, we just showed the following:
+
+<LXD f='x^2-bx + \left(\frac{b}{2}\right)^2 = \left(x-\frac{b}{2}\right)^2'/>
+
+As mentioned prior, this geometric intution only works for positive values of <LXI f='x'/> and <LXI f='b,'/> with the additional constraint that <LXI f='b<x,'/> but the equation actually holds for all values of <LXI f='x'/> and <LXI f='b.'/>
+
+
+#### Application
+
+Hopefully by this point, you know exactly why completing the square is named the way it is. Along the way, we also discovered two powerful equations: 
+
+<LXD f='x^2+bx + \left(\frac{b}{2}\right)^2 = \left(x+\frac{b}{2}\right)^2'/>
+<LXD f='x^2-bx + \left(\frac{b}{2}\right)^2 = \left(x-\frac{b}{2}\right)^2'/>
+
+But so what? What are these equations useful for? Remember, completing the square gives us a method for solving certain types of equations. Going over some examples will demonstrate this.
+
+##### Example 1
+
+Let's consider the equation <LXI f='x^2+4x=5.'/> Analagous to splitting the rectangle in half, we're going to take half of the coefficient of the <LXI f='x'/> term, which is <LXI f='4'/> in this case. Half of <LXI f='4'/> is <LXI f='2.'/> Going back to our analogy, we now have the side length of the small square. We now have to add the area of this small square to both sides, which is <LXI f='2^2=4.'/> We now have the following:
+
+<LXD f='x^2+4x+4=9'/>
+
+We can now factor the left side as the square of a term (which was the whole point of completing the square):
+
+<LXD f='(x+2)^2=9'/>
+
+We can now take the square root of both sides, but remember, we have to consider plus or minus.
+
+<LXD f='x+2= \pm\sqrt{9} = \pm 3'/>
+
+Solving for <LXI f='x,'/> we get <LXI f='x=-2 \pm 3,'/> which leads us to <LXI f='x=1'/> or <LXI f='x=-5.'/> Plugging in these values to the original equation indeed shows that the equality holds.
+
+##### Example 2
+
+Let's consider a more complex equation, <LXI f='36x^2+60x=83.'/> You might be tempted to just take half of <LXI f='60,'/> square it, and add that number to both sides of the equation. However, this would be incorrect! Notice that the coefficient of the <LXI f='x^2'/> term is <LXI f='36'/> in this example. Everything that we went through so far was with an <LXI f='x^2'/> term with a coefficient of <LXI f='1.'/> So, to solve this example, we'll have to be a bit more clever.
+
+First, in order to achieve an <LXI f='x^2'/> term with a coefficient of <LXI f='1,'/> we're going to factor out a <LXI f='36'/> from the left side of the equation. It might be odd to factor out a <LXI f='36'/> from <LXI f='60'/>, but it's actually possible! We'll end up with the following:
+
+<LXD f='36\left(x^2+\frac{5}{3}x\right) = 83'/>
+
+Dividing both sides by <LXI f='36'/> would have also been possible, but let's just continue with this method for the sake of demonstration. Now that the inside of the parenthesis looks like something familiar, we can begin to complete the square. We take half of <LXI f='\frac{5}{3},'/> which is <LXI f='\frac{5}{6},'/> and square it to get <LXI f='\left(\frac{5}{6}\right)^2.'/> We want to add this quantity to the inside of the parenthesis. But remember, if we add something to one side of the equation, we must add the same thing to the other side. But are we really adding just <LXI f='\left(\frac{5}{6}\right)^2'/> to the left side? No! We're actually adding <LXI f='36\left(\frac{5}{6}\right)^2'/> because of the <LXI f='36'/> on the outside of the parenthesis. So, by adding <LXI f='\left(\frac{5}{6}\right)^2'/> to the inside of the parenthesis, we're actually adding by <LXI f='36\left(\frac{5}{6}\right)^2.'/> So, we'll have the following:
+
+<LXD f='36\left(x^2+\frac{5}{3}x + \left(\frac{5}{6}\right)^2 \right) = 83 + 36 \left(\frac{5}{6}\right)^2'/>
+
+Factoring and simplifying, we have:
+
+<LXD f='36\left(x + \frac{5}{6}\right)^2 = 83 + 25 = 108'/>
+
+Now, if we divide by <LXI f='36,'/> we have:
+
+<LXD f='\left(x + \frac{5}{6}\right)^2 = 3'/>
+
+Taking the square root of both sides, we get:
+
+<LXD f='x + \frac{5}{6}= \pm \sqrt{3}'/>
+
+Finally, we subtract by <LXI f='\frac{5}{6}'/> to get our final answer:
+
+<LXD f='x = - \frac{5}{6} \pm \sqrt{3}'/>
