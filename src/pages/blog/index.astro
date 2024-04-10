@@ -28,11 +28,11 @@ const posts = (await getCollection("blog")).sort(
         gap: 2rem;
         list-style-type: none;
         margin: 0;
-        padding: 1rem;
+        padding: 1rem 0.5rem;
       }
       ul li {
         /* 50% for 2 columns */
-        width: calc(100% - 1rem);
+        width: 100%;
       }
       ul li * {
         text-decoration: none;
@@ -77,21 +77,6 @@ const posts = (await getCollection("blog")).sort(
       }
       ul a:hover img {
         box-shadow: var(--box-shadow);
-      }
-      @media (max-width: 540px) {
-        ul {
-          gap: 0.5em;
-        }
-        ul li {
-          width: 100%;
-          padding: 0em 1em 0.5em 1em;
-        }
-        ul li:first-child {
-          margin-bottom: 0;
-        }
-        ul li:first-child .title {
-          font-size: 1.563em;
-        }
       }
     </style>
   </head>
