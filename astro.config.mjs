@@ -4,6 +4,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://isaacyno.github.io/',
+  site: 'https://isaacyno.github.io',
   integrations: [mdx(), sitemap()]
 });
