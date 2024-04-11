@@ -7,7 +7,7 @@ import FormattedDate from "../components/FormattedDate.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate } = Astro.props;
 let bt = "Isaac No | ".concat(title);
 ---
 
@@ -27,20 +27,6 @@ let bt = "Isaac No | ".concat(title);
         margin: 0;
         margin-left: auto;
         margin-right: auto;
-      }
-      .hero-image {
-        width: calc(100% - 2em);
-        max-width: 720px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .hero-image img {
-        display: block;
-        margin: 0 auto;
-        border-radius: 12px;
-        box-shadow: var(--box-shadow);
-        width: auto;
       }
       .prose {
         width: 720px;
@@ -66,9 +52,6 @@ let bt = "Isaac No | ".concat(title);
         margin-bottom: 0.5em;
         color: rgb(var(--gray));
       }
-      .last-updated-on {
-        font-style: italic;
-      }
       .blogimage {
         display: block;
         margin-left: auto;
@@ -81,15 +64,6 @@ let bt = "Isaac No | ".concat(title);
     <Header />
     <main>
       <article>
-        <!-- 
-        <div class="hero-image">
-          {
-            heroImage && (
-              <img width={1080} height={540} src={heroImage} alt="" />
-            )
-          }
-        </div>
-      -->
         <div class="prose">
           <div class="title">
             <h2>{title}</h2>
@@ -97,13 +71,6 @@ let bt = "Isaac No | ".concat(title);
             <hr />
             <div class="date">
               <FormattedDate date={pubDate} />
-              {
-                updatedDate && (
-                  <div class="last-updated-on">
-                    Last updated on <FormattedDate date={updatedDate} />
-                  </div>
-                )
-              }
             </div>
           </div>
           <slot />
