@@ -1,9 +1,9 @@
 ---
-const { path } = Astro.props;
+const { path, alt = "" } = Astro.props;
 ---
 
 <div>
-  <img src={path} />
+  <img src={path} alt={alt} />
 </div>
 
 <style>

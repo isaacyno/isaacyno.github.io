@@ -14,15 +14,15 @@ Completing the square is one of the most important concepts taught in an algebra
 
 Let's start off with a simple expression, <LXI f='x^2+bx.'/> If we assume that <LXI f='x'/> and <LXI f='b'/> are both positive, we can represent this quantity as the sum of the areas of a square with length <LXI f='x'/> and a rectangle with a length of <LXI f='x'/> and a width of <LXI f='b.'/> Geometrically, it might look something like this:
 
-<SVG path="/2/2-1.svg"/>
+<SVG path="/2/2-1.svg" alt="diagram 2-1"/>
 
 We somehow want to rearrange these components to look like an incomplete square, so that we can then "complete the square." Is this achieveable? Certainly! We can split the rectangle into two identical, smaller rectangles with a length of <LXI f='x'/> and a width of <LXI f='\frac{b}{2}.'/> We can then place one on top and one to the right of the square. We now have the following:
 
-<SVG path="/2/2-2.svg"/>
+<SVG path="/2/2-2.svg" alt="diagram 2-2"/>
 
 This now looks like an incomplete square! The entire figure looks like a square of length <LXI f='x + \frac{b}{2}'/> with a missing portion on the top right. Note that the figure still has an area of <LXI f='x^2+bx'/> since we didn't add or remove any components (we only did some rearranging). Let's fill in this missing portion and continue our investigation.
 
-<SVG path="/2/2-3.svg"/>
+<SVG path="/2/2-3.svg" alt="diagram 2-3"/>
 
 The purple shape on the top right actually turns out to be a square of length <LXI f='\frac{b}{2}'/> (our splitting of the green rectangle exactly in half ensures this). The area of this purple square is <LXI f='\left(\frac{b}{2}\right)^2.'/>
 
@@ -38,27 +38,27 @@ Let's now consider the expression <LXI f='x^2-bx.'/> Similar to case 1, we will 
 
 So far we have the quantity <LXI f='x^2-bx,'/> which can be represented as the area of a square with length <LXI f='x,'/> minus the area of a rectangle with a length of <LXI f='x'/> and a width of <LXI f='b.'/> The diagram is essentially the same as that of the beginning of case 1, but the rectangle is now shaded in red because we want to subtract off this area.
 
-<SVG path="/2/2-4.svg"/>
+<SVG path="/2/2-4.svg" alt="diagram 2-4"/>
 
 Similar to case 1, we're going to split the rectangle into two identical, smaller rectangles with a length of <LXI f='x'/> and a width of <LXI f='\frac{b}{2}.'/> This time, however, we're going to subtract off the areas of the smaller rectangles one at a time:
 
-<SVG path="/2/2-5.svg"/>
+<SVG path="/2/2-5.svg" alt="diagram 2-5"/>
 
 After we subtract off the first rectangle, we are left with the following:
 
-<SVG path="/2/2-6.svg"/>
+<SVG path="/2/2-6.svg" alt="diagram 2-6"/>
 
 Let's now try to subtract off the remaining rectangle:
 
-<SVG path="/2/2-7.svg"/>
+<SVG path="/2/2-7.svg" alt="diagram 2-7"/>
 
 We're not able to subtract this rectangle completely; it seems like a small square is left over. Remember, we're subtracting off these rectangles in this specific manner in order to be left with an incomplete square. We're now left with the following:
 
-<SVG path="/2/2-8.svg"/>
+<SVG path="/2/2-8.svg" alt="diagram 2-8"/>
 
 Finally, let's shave off this tiny square from the top right of our larger square.
 
-<SVG path="/2/2-9.svg"/>
+<SVG path="/2/2-9.svg" alt="diagram 2-9"/>
 
 What does this accomplish? Well, the area of our remaining figure is actually equal to the original quantity that we started with, <LXI f='x^2-bx.'/> Notice that we were successfully able to subtract off the red area from the blue area in such a way that we are left with an incomplete square. All that's left now is to complete the square, and with the way that the diagram is already set up, it's really easy! We just have to add back the same area as the small red square, which is <LXI f='\left(\frac{b}{2}\right)^2.'/> If we do so, we'll have the area of a square with length <LXI f='x-\frac{b}{2}.'/> Algebraically, we just showed the following:
 
