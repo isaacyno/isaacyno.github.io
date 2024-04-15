@@ -42,6 +42,7 @@
     </a>
   </div>
 </footer>
+
 <style>
   footer {
     padding: 1em 1em 1em 1em;
@@ -49,6 +50,9 @@
     color: rgb(var(--gray));
     text-align: center;
     font-size: 14px;
+  }
+  html.dark footer {
+    background: var(--d-dark-gray);
   }
   .social-links {
     display: flex;
@@ -60,7 +64,11 @@
     text-decoration: none;
     color: rgb(var(--gray));
   }
-  .social-links a:hover {
+  html.dark .social-links a {
+    color: var(--d-dark-white);
+  }
+  .social-links a:hover,
+  html.dark .social-links a:hover {
     color: var(--accent);
   }
 </style>

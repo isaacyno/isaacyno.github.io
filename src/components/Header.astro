@@ -1,20 +1,26 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
+import ThemeIcon from "./ThemeIcon.astro";
 ---
 
 <header>
   <nav>
     <HeaderLink href="/">Home</HeaderLink>
     <HeaderLink href="/blog">Blog</HeaderLink>
+    <ThemeIcon />
   </nav>
 </header>
 <style>
   header {
     margin: 0;
     padding: 0 1em;
-    background: white;
+    background: var(--white);
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
     font-size: 18px;
+  }
+
+  html.dark header {
+    background: var(--d-dark-gray);
   }
 
   nav {
