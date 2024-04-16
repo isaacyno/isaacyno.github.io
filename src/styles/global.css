@@ -187,6 +187,9 @@ hr {
 	  max-width: 40rem;
 	  padding: 1rem 0rem;
 	}
+	.image {
+	  padding: 0;
+	}
 }
 
 @media screen and (min-width: 1201px) {
