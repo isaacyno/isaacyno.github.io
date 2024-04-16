@@ -14,12 +14,21 @@
 <style>
   #themeToggle {
     border: 0;
-    padding: 0 1em;
+    border-radius: 1em;
+    padding: 0.8em;
+    margin: 0.2em;
     background: none;
     fill: rgb(var(--gray-dark));
+    cursor: pointer;
+  }
+  #themeToggle:hover {
+    background: rgb(var(--gray-light));
   }
   :global(.dark) #themeToggle {
-    fill: white;
+    fill: var(--d-white);
+  }
+  :global(.dark) #themeToggle:hover {
+    background: var(--d-gray);
   }
 </style>
 
