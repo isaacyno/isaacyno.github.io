@@ -23,9 +23,9 @@
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
 
 	/* colors for dark mode */
-	--d-dark-gray: rgb(32, 32, 32);
-	--d-gray: rgb(40, 40, 40);
-	--d-light-gray: rgb(160,160,160);
+	--d-dark-gray: rgb(16, 16, 16);
+	--d-gray: rgb(32, 32, 32);
+	--d-light-gray: rgb(160, 160, 160);
 	--d-white: rgb(250, 250, 250);
 	--d-dark-white: rgb(210,210,210);
 }
