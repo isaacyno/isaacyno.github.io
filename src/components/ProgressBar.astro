@@ -36,7 +36,7 @@
     };
 
     const getValue = () => {
-      return window.pageYOffset || document.documentElement.scrollTop;
+      return window.scrollY || document.documentElement.scrollTop;
     };
 
     const progressBar = document.querySelector(".progress-bar");
