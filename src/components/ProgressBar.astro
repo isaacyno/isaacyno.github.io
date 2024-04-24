@@ -1,0 +1,68 @@
+---
+
+---
+
+<div class="progress-container fixed-top">
+  <span class="progress-bar"></span>
+</div>
+
+<style>
+  .fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    /* the progress bar is above the other content on the page */
+    z-index: 1;
+  }
+  .progress-container {
+    width: 100%;
+    background-color: transparent;
+    height: 4px;
+    display: block;
+  }
+  .progress-bar {
+    background-color: var(--accent);
+    width: 0%;
+    display: block;
+    height: inherit;
+  }
+</style>
+
+<script is:inline>
+  function scrollProgressBar() {
+    const getMax = () => {
+      return document.documentElement.scrollHeight - window.innerHeight;
+    };
+
+    const getValue = () => {
+      return window.pageYOffset || document.documentElement.scrollTop;
+    };
+
+    const progressBar = document.querySelector(".progress-bar");
+    let max = getMax();
+    let value;
+    let width;
+
+    const getWidth = () => {
+      // Calculate width in percentage
+      value = getValue();
+      width = (value / max) * 100;
+      width = width + "%";
+      return width;
+    };
+
+    const setWidth = () => {
+      progressBar.style.width = getWidth();
+    };
+
+    document.addEventListener("scroll", setWidth);
+    window.addEventListener("resize", () => {
+      // Need to reset max
+      max = getMax();
+      setWidth();
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", scrollProgressBar);
+</script>
